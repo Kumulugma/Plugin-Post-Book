@@ -37,7 +37,7 @@
                         postsHtml += '<div class="k3e-post-actions">';
                         postsHtml += '<a href="' + post.edit_url + '" class="k3e-post-action" target="_blank">Edytuj</a>';
                         
-                        if (post.status.toLowerCase() === 'publish' && post.view_url) {
+                        if (post.status.toLowerCase() === 'opublikowany' && post.view_url) {
                             postsHtml += '<a href="' + post.view_url + '" class="k3e-post-action" target="_blank">Zobacz</a>';
                         }
                         
@@ -191,7 +191,7 @@
         
         var dayElement = this.querySelector('.k3e-day-number');
         var day = dayElement ? dayElement.textContent : '';
-        var postsData = this.getAttribute('data-tooltip');
+        var postsData = this.getAttribute('data-posts');
         
         if (postsData) {
             try {
@@ -199,7 +199,7 @@
                 var posts = JSON.parse(postsData);
                 window.openPostsModal(day, currentMonth, currentYear, posts);
             } catch(error) {
-                // Silent fail
+                console.log('Błąd parsowania danych wpisów:', error);
             }
         }
     }

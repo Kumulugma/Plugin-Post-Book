@@ -1,143 +1,4 @@
-/* Dni z wpisami - różne typy */
-.k3e-has-posts {
-    border-color: #8bc34a;
-}
-
-.k3e-has-posts:hover {
-    background-color: #e8f5e8 !important;
-}
-
-/* Standardowe wpisy (posty) */
-.k3e-has-posts-std {
-    background-color: #f1f8e9 !important;
-    border-color: #8bc34a;
-}
-
-/* Strony */
-.k3e-has-pages {
-    background-color: #e3f2fd !important;
-    border-color: #2196f3;
-}
-
-/* Species (gatunki) - pomarańczowy */
-.k3e-has-species {
-    background-color: #fff3e0 !important;
-    border-color: #ff9800;
-}
-
-.k3e-has-species .k3e-post-indicator {
-    background: #ff9800;
-}
-
-/* Guides (poradniki) - fioletowy */
-.k3e-has-guides {
-    background-color: #f3e5f5 !important;
-    border-color: #9c27b0;
-}
-
-.k3e-has-guides .k3e-post-indicator {
-    background: #9c27b0;
-}
-
-/* Hover effects dla różnych typów */
-.k3e-has-species:hover {
-    background-color: #ffe0b2 !important;
-}
-
-.k3e-has-guides:hover {
-    background-color: #e1bee7 !important;
-}
-
-.k3e-has-pages:hover {
-    background-color: #bbdefb !important;
-}/* Responsywność */
-@media (max-width: 768px) {
-    .k3e-calendar-navigation {
-        flex-direction: column;
-        gap: 15px;
-        align-items: center;
-    }
-    
-    .k3e-nav-selects {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .k3e-select {
-        min-width: 100px;
-    }
-    
-    .k3e-submit-btn {
-        width: 100%;
-        margin-top: 10px;
-    }
-    
-    .k3e-calendar th,
-    .k3e-calendar td {
-        font-size: 12px;
-    }
-    
-    .k3e-calendar td {
-        height: 50px;
-    }
-    
-    .k3e-day-number {
-        padding: 5px;
-    }
-    
-    .k3e-post-indicator {
-        width: 16px;
-        height: 16px;
-        font-size: 9px;
-    }
-    
-    .k3e-calendar-legend {
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-    }
-    
-    .k3e-modal-content {
-        width: 95%;
-        margin: 10px;
-    }
-    
-    .k3e-modal-header {
-        padding: 15px 20px 10px;
-    }
-    
-    .k3e-modal-header h3 {
-        font-size: 16px;
-    }
-    
-    .k3e-modal-body {
-        padding: 15px 20px;
-    }
-    
-    .k3e-post-item {
-        padding: 12px;
-    }
-    
-    .k3e-post-title {
-        font-size: 15px;
-    }
-    
-    .k3e-post-meta {
-        flex-direction: column;
-        gap: 8px;
-        align-items: flex-start;
-    }
-    
-    .k3e-post-actions {
-        flex-direction: column;
-        gap: 8px;
-    }
-    
-    .k3e-post-action {
-        text-align: center;
-    }
-}
-        /* Stylowanie kalendarza K3e Post Book */
+/* Stylowanie kalendarza K3e Post Book */
 
 .k3e-post-book-container {
     padding: 15px;
@@ -310,6 +171,51 @@
 
 .k3e-has-posts:hover {
     background-color: #e8f5e8 !important;
+}
+
+/* Standardowe wpisy (posty) */
+.k3e-has-posts-std {
+    background-color: #f1f8e9 !important;
+    border-color: #8bc34a;
+}
+
+/* Strony */
+.k3e-has-pages {
+    background-color: #e3f2fd !important;
+    border-color: #2196f3;
+}
+
+/* Species (gatunki) - pomarańczowy */
+.k3e-has-species {
+    background-color: #fff3e0 !important;
+    border-color: #ff9800;
+}
+
+.k3e-has-species .k3e-post-indicator {
+    background: #ff9800;
+}
+
+/* Guides (poradniki) - fioletowy */
+.k3e-has-guides {
+    background-color: #f3e5f5 !important;
+    border-color: #9c27b0;
+}
+
+.k3e-has-guides .k3e-post-indicator {
+    background: #9c27b0;
+}
+
+/* Hover effects dla różnych typów */
+.k3e-has-species:hover {
+    background-color: #ffe0b2 !important;
+}
+
+.k3e-has-guides:hover {
+    background-color: #e1bee7 !important;
+}
+
+.k3e-has-pages:hover {
+    background-color: #bbdefb !important;
 }
 
 /* Wskaźnik liczby wpisów */
@@ -637,11 +543,17 @@ body.k3e-modal-open {
     }
     
     .k3e-nav-selects {
-        order: 2;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     
-    .k3e-nav-buttons {
-        order: 1;
+    .k3e-select {
+        min-width: 100px;
+    }
+    
+    .k3e-submit-btn {
+        width: 100%;
+        margin-top: 10px;
     }
     
     .k3e-calendar th,
@@ -669,9 +581,44 @@ body.k3e-modal-open {
         gap: 10px;
     }
     
-    .k3e-tooltip {
-        max-width: 250px;
-        font-size: 12px;
+    .k3e-modal-content {
+        width: 95%;
+        margin: 10px;
+    }
+    
+    .k3e-modal-header {
+        padding: 15px 20px 10px;
+    }
+    
+    .k3e-modal-header h3 {
+        font-size: 16px;
+    }
+    
+    .k3e-modal-body {
+        padding: 15px 20px;
+    }
+    
+    .k3e-post-item {
+        padding: 12px;
+    }
+    
+    .k3e-post-title {
+        font-size: 15px;
+    }
+    
+    .k3e-post-meta {
+        flex-direction: column;
+        gap: 8px;
+        align-items: flex-start;
+    }
+    
+    .k3e-post-actions {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .k3e-post-action {
+        text-align: center;
     }
 }
 

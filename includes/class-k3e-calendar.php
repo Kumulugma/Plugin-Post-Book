@@ -33,7 +33,6 @@ class K3e_Calendar {
         $day_of_week = date('N', $first_day) - 1; // 0 = poniedziałek
         
         $html = '<div class="k3e-calendar-wrapper">';
-        // Usunięty stary header - używamy nowego w template
         
         $html .= '<table class="k3e-calendar">';
         
@@ -89,8 +88,8 @@ class K3e_Calendar {
                     $html .= '<td class="' . $css_class . '"';
                     
                     if ($has_posts) {
-                        $tooltip_data = $this->prepare_tooltip_data($posts_data[$current_date]);
-                        $html .= ' data-tooltip="' . esc_attr($tooltip_data) . '"';
+                        $posts_json = $this->prepare_posts_data($posts_data[$current_date]);
+                        $html .= ' data-posts="' . esc_attr($posts_json) . '"';
                     }
                     
                     $html .= '>';
@@ -161,25 +160,25 @@ class K3e_Calendar {
     }
     
     /**
-     * Przygotowywanie danych dla tooltip
+     * Przygotowywanie danych dla JavaScript (modal)
      */
-    private function prepare_tooltip_data($posts) {
-        $tooltip_items = array();
+    private function prepare_posts_data($posts) {
+        $posts_data = array();
         
         foreach ($posts as $post) {
-            $post_type_obj = get_post_type_object($post['type']);
-            $post_type_label = $post_type_obj ? $post_type_obj->labels->singular_name : ucfirst($post['type']);
             $status_label = $this->get_status_label($post['status']);
             
-            $tooltip_items[] = array(
+            $posts_data[] = array(
                 'title' => esc_html($post['title']),
-                'type' => $post_type_label,
+                'type' => $post['type'],
                 'status' => $status_label,
-                'edit_url' => $post['edit_url']
+                'edit_url' => $post['edit_url'],
+                'view_url' => $post['view_url'],
+                'author' => $post['author']
             );
         }
         
-        return json_encode($tooltip_items);
+        return json_encode($posts_data);
     }
     
     /**
